@@ -23,6 +23,11 @@
                     
                 </li>
 
+
+                <li>
+                    <a href="{{route('my-works.index')}}">My Jobs</a>
+                </li>
+
                 <li>
                     <form action="{{route('auth.destroy')}}" method="POST">
                         @csrf
