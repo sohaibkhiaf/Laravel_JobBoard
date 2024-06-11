@@ -10,53 +10,17 @@ class WorkController extends Controller
 
     public function index()
     {
+        $this->authorize('viewAny' , Work::class);
+
         $filters = request()->only( ['search' , 'min_salary' , 'max_salary' , 'experience' , 'category']);
-        return view('works.index' , ['works' => Work::with('employer')->filter($filters)->get()]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
+        return view('works.index' , ['works' => Work::with('employer')->filter($filters)->latest()->get()]);
+    } 
 
     public function show(Work $work)
     {
+        $this->authorize('view' , $work);
+
         return view('works.show', ['work'=> $work->load('employer.works')]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Work $work)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Work $work)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Work $work)
-    {
-        //
-    }
 }

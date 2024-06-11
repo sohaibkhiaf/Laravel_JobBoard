@@ -14,6 +14,10 @@
         </label>
     @endforeach
 
-
+    @error($name)
+        <div style="color: red;">
+            {{$message}}
+        </div>
+    @enderror
 
 </div>
