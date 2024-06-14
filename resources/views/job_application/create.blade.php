@@ -1,16 +1,16 @@
 <x-layout>
-    <x-breadcrumbs :links="['Jobs' => route('works.index') , 
-                            $work->title => route('works.show' , ['work' =>$work]) , 
+    <x-breadcrumbs :links="['Jobs' => route('jobOffers.index') , 
+                            $jobOffer->title => route('jobOffers.show' , ['jobOffer' =>$jobOffer]) , 
                             'Apply' => '#']" />
 
-    <x-work-card :$work />
+    <x-job-card :$jobOffer />
 
     <x-card>
         <h2>
             Your Job Application
         </h2>
 
-        <form action="{{route('work.application.store' , ['work' => $work])}}" method="POST" 
+        <form action="{{route('jobOffer.jobApplication.store' , ['jobOffer' => $jobOffer])}}" method="POST" 
             enctype="multipart/form-data">
             @csrf
             <div>

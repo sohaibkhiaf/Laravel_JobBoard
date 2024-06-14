@@ -2,13 +2,13 @@
 
 namespace Database\Factories;
 
+use App\Models\JobOffer;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\Work;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Work>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\JobOffer>
  */
-class WorkFactory extends Factory
+class JobOfferFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -22,8 +22,8 @@ class WorkFactory extends Factory
             'description' =>fake()->paragraphs(3, true),
             'salary' =>fake()->numberBetween(3_000 , 10_000),
             'location' => fake()->city,
-            'category' => fake()->randomElement(Work::$category),
-            'experience' => fake()->randomElement(Work::$experience)
+            'category' => fake()->randomElement(JobOffer::$category),
+            'experience' => fake()->randomElement(JobOffer::$experience),
         ];
     }
 }

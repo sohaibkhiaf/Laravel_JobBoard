@@ -17,6 +17,6 @@ class Breadcrumbs extends Component
 
     public function render(): View|Closure|string
     {
-        return view('components.breadcrumbs');
+        return view("components.breadcrumbs");
     }
 }

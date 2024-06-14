@@ -10,16 +10,14 @@ class Label extends Component
 {
 
     public function __construct(
-        public ?string $for = '',
+        public ?string $for = "",
         public ?bool $required = false,
     )
-    { 
-
-    }
+    { }
 
 
     public function render(): View|Closure|string
     {
-        return view('components.label');
+        return view("components.label");
     }
 }

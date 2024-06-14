@@ -20,6 +20,6 @@ class RadioGroup extends Component
  
     public function render(): View|Closure|string
     {
-        return view('components.radio-group');
+        return view("components.radio-group");
     }
 }

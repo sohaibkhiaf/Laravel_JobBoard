@@ -1,8 +1,8 @@
 <x-layout>
     <x-breadcrumbs :links="['My Job Applications' => '#']"/>
 
-    @forelse ($applications as $application)
-        <x-work-card :work="$application->work">
+    @forelse ($jobApplications as $application)
+        <x-job-card :jobOffer="$application->jobOffer">
             <div>
                 <div>
                     <div>
@@ -10,8 +10,8 @@
                     </div>
 
                     <div>
-                        Other {{  Str::plural('applicant' , $application->work->work_applications_count -1)}}
-                        {{$application->work->work_applications_count -1}}
+                        Other {{  Str::plural('applicant' , $application->jobOffer->job_applications_count -1)}}
+                        {{$application->jobOffer->job_applications_count -1}}
                     </div>
 
                     <div>
@@ -19,19 +19,19 @@
                     </div>
 
                     <div>
-                        Average asking salary ${{number_format($application->work->work_applications_avg_expected_salary)}}
+                        Average asking salary ${{number_format($application->jobOffer->job_applications_avg_expected_salary)}}
                     </div>
                 </div>
 
                 <div>
-                    <form action="{{route('my-work-applications.destroy' ,$application)}}" method="POST">
+                    <form action="{{route('myJobApplications.destroy' ,$application)}}" method="POST">
                         @csrf
                         @method('DELETE')
                         <x-button>Cancel</x-button>
                     </form>
                 </div>
             </div>
-        </x-work-card>
+        </x-job-card>
     @empty
 
     <div>
@@ -40,7 +40,7 @@
         </div>
 
         <div>
-            Go find some jobs <a href="{{route('works.index')}}">Here</a>
+            Go find some jobs <a href="{{route('jobOffers.index')}}">Here</a>
         </div>
     </div>
         

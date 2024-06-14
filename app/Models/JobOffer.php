@@ -2,17 +2,20 @@
 
 namespace App\Models;
 
+use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Work extends Model
+class JobOffer extends Model
 {
     use HasFactory;
 
-    protected $fillable = ["title","description","location","salary","experience","category",];
+    protected $fillable = ["title", "description", "location", "salary", "experience", "category"];
+
+    public static array $experience = ['Entry' , 'Intermediate' , 'Senior'];
+    public static array $category = ['IT' , 'Finance' , 'Sales' , 'Marketing'];
 
     public function employer() :BelongsTo
     {
@@ -20,15 +23,10 @@ class Work extends Model
     }
 
 
-    public function workApplications() : HasMany
+    public function jobApplications() : HasMany
     {
-        return $this->hasMany(WorkApplication::class);
+        return $this->hasMany(JobApplication::class);
     }
-
-
-    public static array $experience = ['Entry' , 'Intermediate' , 'Senior'];
-    public static array $category = ['IT' , 'Finance' , 'Sales' , 'Marketing'];
-
 
     public static function scopeFilter(Builder $query, array $filters) : Builder
     {
@@ -54,8 +52,8 @@ class Work extends Model
 
     public function hasNotApplied(User $user) : bool
     {
-        return $this->where('id' , $this->id)
-            ->whereHas('workApplications', fn($query) => $query->where('user_id' , '=' , $user->id ?? $user) )
+        return !$this->where('id' , $this->id)
+            ->whereHas('jobApplications',fn($query) => $query->where('user_id' , '=' , $user->id ?? $user) )
             ->exists();
     }
 }

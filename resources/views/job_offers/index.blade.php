@@ -1,10 +1,10 @@
 <x-layout>
 
-    <x-breadcrumbs :links="['Jobs' => route('works.index')]"/>
+    <x-breadcrumbs :links="['Jobs' => route('jobOffers.index')]"/>
 
     <x-card>
 
-        <form action="{{route('works.index')}}" method="GET">
+        <form action="{{route('jobOffers.index')}}" method="GET">
             
             <div>
                 <div>
@@ -19,13 +19,13 @@
                 <div>
                     <div>Experience</div>
 
-                    <x-radio-group name="experience" :options="\App\Models\Work::$experience"/>
+                    <x-radio-group name="experience" :options="\App\Models\JobOffer::$experience"/>
 
                 </div>
                 <div>
                     <div>Category</div>
 
-                    <x-radio-group name="category" :options="\App\Models\Work::$category"/>
+                    <x-radio-group name="category" :options="\App\Models\JobOffer::$category"/>
                 </div>
             </div>
 
@@ -35,13 +35,13 @@
     </x-card>
 
 
-    @foreach ($works as $work)
+    @foreach ($jobOffers as $jobOffer)
 
-        <x-work-card :$work>
-            <x-link-button :href="route('works.show' , ['work' => $work])">
+        <x-job-card :$jobOffer>
+            <x-link-button :href="route('jobOffers.show' , ['jobOffer' => $jobOffer])">
                 Show
             </x-link-button>
-        </x-work-card>
+        </x-job-card>
 
     @endforeach
 

@@ -8,7 +8,9 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-
+    /**
+     * Run the migrations.
+     */
     public function up(): void
     {
         Schema::create('employers', function (Blueprint $table) {
@@ -21,14 +23,17 @@ return new class extends Migration
         });
 
 
-        Schema::table('works' , function(Blueprint $table){
+        Schema::table('job_offers' , function(Blueprint $table){
             $table->foreignIdFor(Employer::class)->constrained();
         });
     }
 
+    /**
+     * Reverse the migrations.
+     */
     public function down(): void
     {
-        Schema::table('works' , function(Blueprint $table){
+        Schema::table('job_offers' , function(Blueprint $table){
             $table->dropForeignIdFor(Employer::class)->constrained();
         });
 

@@ -10,14 +10,14 @@
     <nav>
         <ul style="list-style: none ;">
             <li>
-                <a style="color: #000; text-decoration: none;" href="{{route('works.index')}}">Home</a>
+                <a style="color: #000; text-decoration: none;" href="{{route('jobOffers.index')}}">Home</a>
             </li>
         </ul>
 
         <ul style="list-style: none ; display:flex; justify-content:space-between">
             @auth
                 <li>
-                    <a href="{{ route('my-work-applications.index') }}">
+                    <a href="{{ route('myJobApplications.index') }}">
                         {{auth()->user()->name ?? "Anonymus"}} : Applications
                     </a>
                     
@@ -25,7 +25,7 @@
 
 
                 <li>
-                    <a href="{{route('my-works.index')}}">My Jobs</a>
+                    <a href="{{route('myJobOffers.index')}}">My Jobs</a>
                 </li>
 
                 <li>

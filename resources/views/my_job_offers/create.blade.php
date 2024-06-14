@@ -1,8 +1,8 @@
 <x-layout>
-    <x-breadcrumbs :links="['My Jobs' => route('my-works.index') , 'Create' => '#']" />
+    <x-breadcrumbs :links="['My Jobs' => route('myJobOffers.index') , 'Create' => '#']" />
 
     <x-card>
-        <form action="{{route('my-works.store')}}" method="POST">
+        <form action="{{route('myJobOffers.store')}}" method="POST">
             @csrf
 
             <div>
@@ -28,12 +28,12 @@
 
                 <div>
                     <x-label for="experience" :required="true">Experience</x-label>
-                    <x-radio-group name="experience" :value="old('experience')" :options="\App\Models\Work::$experience" />
+                    <x-radio-group name="experience" :value="old('experience')" :options="\App\Models\JobOffer::$experience" />
                 </div>
                 
                 <div>
                     <x-label for="category" :required="true">Category</x-label>
-                    <x-radio-group name="category" :value="old('category')" :options="\App\Models\Work::$category" />
+                    <x-radio-group name="category" :value="old('category')" :options="\App\Models\JobOffer::$category" />
                 </div>
 
             </div>

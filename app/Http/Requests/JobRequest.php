@@ -2,13 +2,14 @@
 
 namespace App\Http\Requests;
 
-
-use App\Models\Work;
+use App\Models\JobOffer;
 use Illuminate\Foundation\Http\FormRequest;
 
-class WorkRequest extends FormRequest
+class JobRequest extends FormRequest
 {
-
+    /**
+     * Determine if the user is authorized to make this request.
+     */
     public function authorize(): bool
     {
         return true;
@@ -26,8 +27,8 @@ class WorkRequest extends FormRequest
             'description' => 'required|string',
             'salary' => 'required|numeric|min:500',
             'location' => 'required|string|max:255',
-            'experience' => 'required|in:' . implode(',' , Work::$experience),
-            'category' => 'required|in:'. implode(',' , Work::$category),
+            'experience' => 'required|in:' . implode(',' , JobOffer::$experience),
+            'category' => 'required|in:'. implode(',' , JobOffer::$category),
         ];
     }
 }

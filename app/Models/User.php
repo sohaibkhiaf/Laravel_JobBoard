@@ -20,9 +20,9 @@ class User extends Authenticatable
     }
 
 
-    public function workApplications() : HasMany
+    public function jobApplications() : HasMany
     {
-        return $this->hasMany(WorkApplication::class);
+        return $this->hasMany(JobApplication::class);
     }
 
     /**

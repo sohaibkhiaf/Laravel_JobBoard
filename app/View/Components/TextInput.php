@@ -13,13 +13,13 @@ class TextInput extends Component
         public ?string $value = null,
         public ?string $name = null,
         public ?string $placeholder = null,
-        public ?string $type = 'text',
+        public ?string $type = "text",
     )
     { }
 
 
     public function render(): View|Closure|string
     {
-        return view('components.text-input');
+        return view("components.text-input");
     }
 }

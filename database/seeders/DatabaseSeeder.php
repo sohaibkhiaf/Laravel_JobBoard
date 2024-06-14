@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\Employer;
+use App\Models\JobApplication;
+use App\Models\JobOffer;
 use App\Models\User;
 use App\Models\Work;
 use App\Models\WorkApplication;
@@ -11,10 +13,8 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-
     public function run(): void
     {
-
         User::factory()->create([
             "name"=> "Sohaib Khiaf",
             "email"=> "sohaibkhiaf@gmail.com",
@@ -33,18 +33,18 @@ class DatabaseSeeder extends Seeder
         $employers = Employer::all();
 
         for($i=0; $i< 100; $i++){
-            Work::factory()->create([
+            JobOffer::factory()->create([
                 "employer_id" => $employers->random()->id
             ]);
         }
 
 
         foreach ($users as $user){
-            $works = Work::inRandomOrder()->take(rand(0, 4))->get();
+            $jobOffers = JobOffer::inRandomOrder()->take(rand(0, 4))->get();
 
-            foreach($works as $work){
-                WorkApplication::factory()->create([
-                    "work_id"=> $work->id,
+            foreach($jobOffers as $jobOffer){
+                JobApplication::factory()->create([
+                    "job_offer_id"=> $jobOffer->id,
                     "user_id" => $user->id,
                 ]);
             }

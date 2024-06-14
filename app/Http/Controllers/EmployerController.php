@@ -9,6 +9,7 @@ class EmployerController extends Controller
 {
 
     public function __construct(){
+        // apply policies
         $this->authorizeResource( Employer::class);
     }
 
@@ -25,8 +26,8 @@ class EmployerController extends Controller
             ]),
         );
 
-        return redirect()->route('works.index')
-            ->with('success','Your employer account was created!');
+        return redirect()->route("jobOffers.index")
+            ->with("success","Your employer account was created!");
     }
 
 }

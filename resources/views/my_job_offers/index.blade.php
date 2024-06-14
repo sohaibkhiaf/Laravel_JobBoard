@@ -2,15 +2,15 @@
     <x-breadcrumbs :links="['My Jobs' => '#']" />
 
     <div>
-        <x-link-button href="{{route('my-works.create')}}">Add New</x-link-button>
+        <x-link-button href="{{route('myJobOffers.create')}}">Add New</x-link-button>
     </div>
 
-    @forelse ($works as $work)
-        <x-work-card :$work>
+    @forelse ($jobOffers as $jobOffer)
+        <x-job-card :$jobOffer>
             
             <div>
 
-                @forelse ($work->workApplications as $application)
+                @forelse ($jobOffer->jobApplications as $application)
                     <div>
                         <div>
                             
@@ -36,10 +36,11 @@
                 @endforelse
 
                 <div>
-                    <x-link-button href="{{route('my-works.edit', ['my_work' => $work])}}">Edit</x-link-button>
+                    <x-link-button href="{{route('myJobOffers.edit', ['myJobOffer' => $jobOffer])}}">Edit</x-link-button>
                 </div>
             </div>
-        </x-work-card>
+        </x-job-card>
+        
     @empty
         <div>
             <div>
@@ -47,7 +48,7 @@
             </div>
 
             <div>
-                Post your first Job <a href="{{route('my_works.create')}}">here!</a>
+                Post your first Job <a href="{{route('myJobOffers.create')}}">here!</a>
             </div>
         </div>
     @endforelse

@@ -18,8 +18,8 @@ class Employer extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function works() : HasMany
+    public function jobOffers() : HasMany
     {
-        return $this->hasMany(Work::class);
+        return $this->hasMany(JobOffer::class);
     }
 }

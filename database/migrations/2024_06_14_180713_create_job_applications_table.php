@@ -1,7 +1,7 @@
 <?php
 
+use App\Models\JobOffer;
 use App\Models\User;
-use App\Models\Work;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('work_applications', function (Blueprint $table) {
+        Schema::create('job_applications', function (Blueprint $table) {
             $table->id();
 
             $table->foreignIdFor(User::class)->constrained();
-            $table->foreignIdFor(Work::class)->constrained();
+            $table->foreignIdFor(JobOffer::class)->constrained();
 
             $table->unsignedInteger('expected_salary');
 
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('work_applications');
+        Schema::dropIfExists('job_applications');
     }
 };
