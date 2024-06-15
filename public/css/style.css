@@ -202,7 +202,7 @@ body{
     background-color: #6cc173;
     text-align: left;
     padding: .5rem 1rem;
-    margin: 0 1rem;
+    margin: 1rem 1rem 0;
 }
 .container div.green-alert-container p.green-alert-title,
 .container div.red-alert-container p.red-alert-title{
@@ -216,7 +216,7 @@ body{
     background-color: #ff392e; 
     text-align: left;
     padding: .5rem 1rem;
-    margin: 0 1rem;
+    margin: 1rem 1rem 0;
 }
 
 
@@ -453,6 +453,28 @@ form.apply-to-job-form div{
     font-size: 1rem;
 }
 
-/* my_job_offers */
+/* my_job_offers.create & my_job_offers.edit */
+
+.job-offers-create-edit{
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.experience-category-container{
+    display: flex;
+}
+.experience-category-container div{
+    flex: 50%;
+}
+
+.create-edit-button{
+    width: 100%;
+    padding: .25rem;
+    margin-top: .5rem;
+}
+.create-edit-button:hover{
+    background-color: #e0e0ee;
+}   
+
 
 

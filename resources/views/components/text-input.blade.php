@@ -3,7 +3,7 @@
         <input class="x-text-input" type="{{$type}}" placeholder="{{$placeholder}}" name="{{$name}}" 
             value="{{ old($name , $value)}}" id="{{$name}}"/>
     @else
-        <textarea name="{{$name}}" id="{{$name}}">{{ old($name , $value)}}</textarea>
+        <textarea class="x-text-input" name="{{$name}}" id="{{$name}}">{{ old($name , $value)}}</textarea>
     @endif
 
     @error($name)
