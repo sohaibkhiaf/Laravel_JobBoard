@@ -3,15 +3,15 @@
                             $jobOffer->title => route('jobOffers.show' , ['jobOffer' =>$jobOffer]) , 
                             'Apply' => '#']" />
 
-    <x-job-card :$jobOffer />
+    <x-job-card class="offer-to-apply" :$jobOffer />
 
-    <x-card>
+    <x-card class="apply-to-job">
         <h2>
             Your Job Application
         </h2>
 
-        <form action="{{route('jobOffer.jobApplication.store' , ['jobOffer' => $jobOffer])}}" method="POST" 
-            enctype="multipart/form-data">
+        <form action="{{route('jobOffer.jobApplication.store' , ['jobOffer' => $jobOffer])}}" 
+            class="apply-to-job-form" method="POST" enctype="multipart/form-data">
             @csrf
             <div>
                 <x-label for="expected_salary" :required="true">Expected Salary</x-label>
@@ -23,7 +23,7 @@
                 <x-text-input type="file" name="cv"/>
             </div>
 
-            <button>Apply</button>
+            <x-button class="apply-to-job-button">Apply</x-button>
         </form>
 
     </x-card>

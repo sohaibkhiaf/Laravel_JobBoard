@@ -1,7 +1,7 @@
 <nav {{ $attributes }} >
     <ul class="x-breadcrumbs-ul">
         <li>
-            <a class="x-breadcrumbs-a" href="/">Home</a>
+            <a class="x-breadcrumbs-a" href="{{route('jobOffers.index')}}">Home</a>
         </li>
         
         @foreach ($links as $label => $link)

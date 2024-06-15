@@ -137,7 +137,7 @@
 /* layout */
 
 body{
-    background-color: #c9d5f7;
+    background-color: #dee6fa;
     text-align: center;
 }
 
@@ -145,6 +145,7 @@ body{
     width: 80%;
     margin: 0 auto;
     background-color: #dee6fa;
+    height: 100%;
 }
 
 .container nav.navbar{
@@ -294,6 +295,7 @@ form.filter-form .filter-button:hover{
 }
 .more-jobs h2{
     margin-bottom: 1rem;
+    text-align: left;
 }
 .other-job-offer{
     margin-bottom: 1rem;
@@ -342,5 +344,28 @@ form.filter-form .filter-button:hover{
 
 /* job_application.create */
 
+.offer-to-apply{
+    margin-bottom: 1rem;
+}
+
+.apply-to-job{
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+form.apply-to-job-form div{
+    margin-bottom: .25rem;
+}
+.apply-to-job-button{
+    width: 100%;
+    margin-top: .5rem;
+    padding: .25rem;
+}
+.apply-to-job-button:hover{
+    background-color: #e0e0ee;
+}
+
+
+/* employer.create */
 
 
