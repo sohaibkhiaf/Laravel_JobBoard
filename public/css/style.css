@@ -313,3 +313,34 @@ form.filter-form .filter-button:hover{
 .other-job-offer-bottom{
     color: #444;
 }
+
+/* my_job_application.create */
+
+.job-application{
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.application-container .application-top{
+    display: flex;
+}
+.application-container .application-top .application-top-applicants{
+    flex: 50%;
+    text-align: left;
+}
+.application-container .application-top .application-top-salaries{
+    flex: 50%;
+    text-align: right;
+}
+.cancel-application-button{
+    margin-top: .5rem;
+}
+.cancel-application-button:hover{
+    background-color: #e0e0ee;
+}
+
+
+/* job_application.create */
+
+
+
