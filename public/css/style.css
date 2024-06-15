@@ -404,4 +404,55 @@ form.apply-to-job-form div{
 
 /* my_job_offers.index */
 
+.add-new-container{
+    text-align: left;
+    padding: 1rem;
+}
+.add-new-button{
+    padding: .25rem;
+}
+.add-new-button:hover{
+    background-color: #e0e0ee;
+}
+
+.my-job-offers{
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.application-container{
+    margin-bottom: 1rem;
+}
+
+.application-top{
+    display: flex;
+}
+.application-top .application-user-name,
+.application-top .application-created-at{
+    margin-right: .5rem;
+}
+.application-top .application-download-cv{
+    margin-left: auto;
+    color: #444;
+}
+.application-bottom{
+    text-align: left;
+}
+.no-applications{
+    margin-bottom: 1rem;
+}
+
+.edit-job-offer-button:hover{
+    background-color: #e0e0ee;
+}
+
+.no-job-offers{
+    font-size: 1.2rem;
+}
+.post-job-offer{
+    font-size: 1rem;
+}
+
+/* my_job_offers */
+
 
