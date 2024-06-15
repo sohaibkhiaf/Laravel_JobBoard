@@ -4,63 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{url('css/style.css')}}">
     <title>Job Board</title>
 </head>
 <body>
-    <nav>
-        <ul style="list-style: none ;">
-            <li>
-                <a style="color: #000; text-decoration: none;" href="{{route('jobOffers.index')}}">Home</a>
-            </li>
-        </ul>
 
-        <ul style="list-style: none ; display:flex; justify-content:space-between">
-            @auth
-                <li>
-                    <a href="{{ route('myJobApplications.index') }}">
-                        {{auth()->user()->name ?? "Anonymus"}} : Applications
-                    </a>
-                    
+    <div class="container">
+
+        <nav class="navbar">
+            <ul class="home-list">
+                <li class="home-list-item">
+                    <a class="home-button" href="{{route('jobOffers.index')}}">Home</a>
                 </li>
 
-
-                <li>
-                    <a href="{{route('myJobOffers.index')}}">My Jobs</a>
+                <li class="user-name-item">
+                    <a class="user-name-button" href="#">{{auth()->user()->name ?? "Anonymus"}}</a>
                 </li>
+            </ul>
+    
+            <ul class="actions-list">
+                @auth
+                    <li class="left-items">
+                        <a class="applications-button" href="{{ route('myJobApplications.index') }}">
+                            Job Applications
+                        </a>
+                    </li>
+    
+                    <li class="left-items">
+                        <a href="{{route('myJobOffers.index')}}">
+                            My Jobs
+                        </a>
+                    </li>
+    
+                    <li class="right-items">
+                        <form action="{{route('auth.destroy')}}" method="POST">
+                            @csrf
+                            @method('DELETE')
+    
+                            <button>Logout</button>
+                        </form>
+                    </li>
+                @else
+                    <li class="left-items">
+                        <a href="{{route('auth.create')}}">Sign in</a>
+                    </li>
+                @endauth
+                
+            </ul>
+        </nav>
+    
+        @if (session('success'))
+            <div class="green-alert-container" role="alert">
+                <p class="green-alert-title">Success!</p>
+                <p class="green-alert-message">{{ session('success') }}</p>
+            </div>
+        @endif
+    
+        @if (session('error'))
+            <div class="red-alert-container" role="alert">
+                <p class="red-alert-title">Error!</p>
+                <p class="red-alert-message">{{ session('error') }}</p>
+            </div>
+        @endif
+    
+        {{ $slot }}
 
-                <li>
-                    <form action="{{route('auth.destroy')}}" method="POST">
-                        @csrf
-                        @method('DELETE')
-
-                        <button>Logout</button>
-                    </form>
-                </li>
-            @else
-                <li>
-                    <a style="color: #000; text-decoration: none;" href="{{route('auth.create')}}">Sign in</a>
-                </li>
-            @endauth
-            
-        </ul>
-    </nav>
-
-
-    @if (session('success'))
-        <div role="alert">
-            <p style="color:green;">Success!</p>
-            <p style="color:green;">{{ session('success') }}</p>
-        </div>
-    @endif
-
-
-    @if (session('error'))
-        <div role="alert">
-            <p style="color:red;">Error!</p>
-            <p style="color:red;">{{ session('error') }}</p>
-        </div>
-    @endif
-
-    {{ $slot }}
+    </div>
+    
 </body>
 </html>

@@ -1,6 +1,6 @@
-<label for="{{$for}}">
+<label for="{{$for}}" class="x-label">
     {{$slot}}
     @if ($required)
-        <span>*</span>
+        <span class="x-label">*</span>
     @endif
 </label>

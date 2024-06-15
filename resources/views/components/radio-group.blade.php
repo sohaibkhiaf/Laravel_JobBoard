@@ -1,6 +1,6 @@
-<div>
+<div class="x-radio-group">
     @if ($allOptions)
-        <label for="{{$name}}">
+        <label class="x-radio-group-label" for="{{$name}}">
             <input type="radio" name="{{$name}}" value="" @checked(!request($name))/>
             <span>All</span>
         </label>
@@ -8,14 +8,14 @@
 
 
     @foreach ($options as $option)
-        <label for="{{$name}}">
+        <label class="x-radio-group-label" for="{{$name}}">
             <input type="radio" name="{{$name}}" value="{{$option}}" @checked($option === ($value ?? request($name) ) )/>
             <span>{{$option}}</span>
         </label>
     @endforeach
 
     @error($name)
-        <div style="color: red;">
+        <div class="x-radio-group-error" style="color: red;">
             {{$message}}
         </div>
     @enderror

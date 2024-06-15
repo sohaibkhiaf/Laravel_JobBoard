@@ -1,13 +1,13 @@
 <nav {{ $attributes }} >
-    <ul style="display:flex;list-style: none">
+    <ul class="x-breadcrumbs-ul">
         <li>
-            <a href="/">Home</a>
+            <a class="x-breadcrumbs-a" href="/">Home</a>
         </li>
         
         @foreach ($links as $label => $link)
-            <li>➝</li>
+            <li class="x-breadcrumbs-arrow">➝</li>
             <li>
-                <a href="{{ $link }}">{{ $label }}</a>
+                <a class="x-breadcrumbs-a" href="{{ $link }}">{{ $label }}</a>
             </li>
         @endforeach
     </ul>

@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #222;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    overflow-x: hidden;
+}
+
+
+/* components */
+
+/* button */
+.x-button-button{
+    font-size: 1rem;
+    background: none;
+    cursor: pointer;
+    border: .1rem solid #222 ; 
+    border-radius: .25rem;
+    display: inline-block;
+    padding: 0 .25rem;
+}
+
+/* breadcrumbs */
+.x-breadcrumbs-ul{
+    display:flex;
+    list-style: none;
+    padding: 1rem;
+}
+.x-breadcrumbs-a{
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+.x-breadcrumbs-arrow{
+    font-size: 1.2rem;
+}
+
+/* card */
+.x-card{
+    padding: 1rem;
+    background-color: #f8f8ff;
+    margin: 0 1rem;
+    border-radius: .25rem;
+    border: .1rem solid #d4d4d4;
+}
+
+
+/* job card */
+.x-job-card-job-top{
+    display: flex;
+}
+.x-job-card-job-top h2{
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.x-job-card-job-top div{
+    font-size: 1rem;
+    margin-left: auto;
+    color: #444;
+}
+
+.x-job-card-job-bottom{
+    display: flex;
+}
+.x-job-card-job-bottom-left{
+    display: flex;
+    margin-right: 1rem;
+}
+.x-job-card-job-bottom-left div{
+    font-size: 1rem;
+    margin-right: .5rem;
+}
+.x-job-card-job-bottom-right{
+    margin-left: auto;
+}
+.x-job-experience,
+.x-job-category{
+    text-decoration: none;
+    padding: 0 .25rem;
+}
+
+/* tag */
+.x-tag{
+    border: .1rem solid #222;
+    border-radius: .25rem;
+    display: inline-block;
+}
+
+/* label */
+.x-label{
+    font-size: 1rem;
+}
+
+/* link button */
+.x-link-button{
+    border: .1rem solid #222;
+    border-radius: .25rem;
+    display: inline-block;
+}
+.x-link-button-a{
+    text-decoration: none; 
+    padding: 0 .25rem;
+}
+
+
+/* radio group */
+.x-radio-group{
+    text-align: left;
+}
+.x-radio-group-label{
+    display: block;
+}
+.x-radio-group-error{
+    color: red;
+}
+
+/* text input */
+
+.x-text-input{
+    font-size: 1rem;
+    padding: .5rem;
+    background-color: #f8f8ff ;
+    border: .1rem solid #d4d4d4;
+    border-radius: .25rem;
+    width: 100%;
+}
+.x-text-input-error{
+    color: red;
+}
+
+
+/* layout */
+
+body{
+    background-color: #c9d5f7;
+    text-align: center;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    background-color: #dee6fa;
+}
+
+.container nav.navbar{
+    padding: 1rem 1rem 0;
+}
+.container nav.navbar ul.home-list{
+    list-style: none;
+    display: flex;
+}
+.container nav.navbar ul.home-list li.home-list-item{
+    margin-right: 1rem;
+}
+.container nav.navbar ul.home-list li.home-list-item a.home-button{
+    color: #000; 
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.container nav.navbar ul.home-list li.user-name-item{
+    margin-left: auto;
+}
+.container nav.navbar ul.home-list li.user-name-item a.user-name-button{
+    color: #000; 
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.container nav.navbar ul.actions-list{
+    list-style: none ; 
+    display:flex; 
+}
+
+.container nav.navbar ul.actions-list li.left-items{
+    margin-right: 1rem;
+}
+.container nav.navbar ul.actions-list li.right-items{
+    margin-left: auto;
+}
+
+.container nav.navbar ul.actions-list li a{
+    color: #000; 
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.container nav.navbar ul.actions-list li form button{
+    color: #000; 
+    font-size: 1.2rem;
+    background: none;
+    cursor: pointer;
+}
+
+
+/* alert */
+
+.container div.green-alert-container{
+    background-color: #6cc173;
+    text-align: left;
+    padding: .5rem 1rem;
+}
+.container div.green-alert-container p.green-alert-title,
+.container div.red-alert-container p.red-alert-title{
+    color: #fff;
+}
+.container div.green-alert-container p.green-alert-message,
+.container div.red-alert-container p.red-alert-message{
+    color: #fff;
+}
+.container div.red-alert-container{
+    background-color: #ff392e; 
+    text-align: left;
+    padding: .5rem 1rem;
+}
+
+
+
+

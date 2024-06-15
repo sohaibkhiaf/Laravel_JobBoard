@@ -1,3 +1,3 @@
- <article {{--  $attributes->class[''] --}} > 
+<article class="x-card" > 
     {{$slot}}
 </article>
