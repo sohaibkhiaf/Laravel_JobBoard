@@ -144,7 +144,7 @@ body{
 .container{
     width: 80%;
     margin: 0 auto;
-    background-color: #dee6fa;
+    /* background-color: #8a909e; */
     height: 100%;
 }
 
@@ -202,6 +202,7 @@ body{
     background-color: #6cc173;
     text-align: left;
     padding: .5rem 1rem;
+    margin: 0 1rem;
 }
 .container div.green-alert-container p.green-alert-title,
 .container div.red-alert-container p.red-alert-title{
@@ -215,6 +216,7 @@ body{
     background-color: #ff392e; 
     text-align: left;
     padding: .5rem 1rem;
+    margin: 0 1rem;
 }
 
 
@@ -367,5 +369,39 @@ form.apply-to-job-form div{
 
 
 /* employer.create */
+
+.become-employer{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.become-employer-container{
+    text-align: left;
+}
+.create-employer-button{
+    width: 100%;
+    margin-top: .5rem;
+    padding: .25rem;
+}
+.create-employer-button:hover{
+    background-color: #e0e0ee;
+}
+
+
+/* auth.create */
+
+.auth-login{
+    text-align: left;
+}
+.login-button{
+    width: 100%;
+    margin-top: .5rem;
+    padding: .25rem;
+}
+.login-button:hover{
+    background-color: #e0e0ee;
+}
+
+
+/* my_job_offers.index */
 
 

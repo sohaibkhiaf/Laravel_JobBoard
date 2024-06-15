@@ -1,10 +1,10 @@
 <x-layout>
 
-    <h1>
+    <h2>
         Sign in to your account
-    </h1>
+    </h2>
 
-    <x-card>
+    <x-card class="auth-login">
         <form action="{{route('auth.store')}}" method="POST">
             @csrf
 
@@ -31,7 +31,7 @@
                 </div>
             </div>
 
-            <x-button>Login</x-button>
+            <x-button class="login-button">Login</x-button>
         
         </form>
     </x-card>
