@@ -1,4 +1,4 @@
-<x-card>
+<x-card {{$attributes->merge(['class'] ) }}>
 
     <div class="x-job-card-job-top">
         <h2>{{ $jobOffer->title }}</h2>

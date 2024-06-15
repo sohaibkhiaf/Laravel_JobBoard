@@ -1,3 +1,3 @@
-<article class="x-card" > 
+<article {{$attributes->merge(['class' => 'x-card' ] ) }} > 
     {{$slot}}
 </article>

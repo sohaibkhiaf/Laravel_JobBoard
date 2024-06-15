@@ -217,5 +217,59 @@ body{
 }
 
 
+/* index */
 
+.filter-form-card{
+    margin-bottom: 1rem;
+}
 
+form.filter-form{
+    text-align: left;
+}
+
+form.filter-form .filter-top{
+    display: flex;
+    gap: .5rem;
+}
+form.filter-form .filter-top .filter-top-search,
+form.filter-form .filter-top .filter-top-salary{
+    flex: 50%;
+}
+form.filter-form .filter-top .filter-top-salary .salary-filter{
+    display: flex;
+    gap: .5rem;
+}
+form.filter-form .filter-top .filter-top-salary .salary-filter .min-salary,
+form.filter-form .filter-top .filter-top-salary .salary-filter .max-salary{
+    flex: 50%;
+}
+form.filter-form .filter-bottom{
+    display: flex;
+    gap: .5rem;
+    margin-top: 1rem;
+}
+form.filter-form .filter-bottom .filter-bottom-experience,
+form.filter-form .filter-bottom .filter-bottom-category{
+    flex: 50%;
+}
+form.filter-form .filter-button{
+    width: 100%; 
+    font-size: 1rem;
+    padding: .25rem;
+    margin-top: 1rem;
+}
+form.filter-form .filter-button:hover{
+    background-color: #e0e0ee;
+}
+
+.home-job-offer{
+    margin-bottom: 1rem;
+    text-align: left;
+}
+.job-offer-show{
+    margin-top: 1rem;
+}
+.job-offer-show:hover{
+    background-color: #e0e0ee;
+    cursor: pointer;
+}

@@ -1,3 +1,3 @@
-<div class="x-link-button">
+<div {{$attributes->merge(['class' => 'x-link-button' ] ) }}>
     <a class="x-link-button-a" href="{{$href}}"> {{ $slot }} </a>
 </div>

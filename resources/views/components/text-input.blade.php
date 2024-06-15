@@ -1,4 +1,4 @@
-<div>
+<div {{$attributes->merge(['class'] ) }}>
     @if ($type != 'textarea')
         <input class="x-text-input" type="{{$type}}" placeholder="{{$placeholder}}" name="{{$name}}" 
             value="{{ old($name , $value)}}" id="{{$name}}"/>
