@@ -217,7 +217,7 @@ body{
 }
 
 
-/* index */
+/* job_offers.index */
 
 .filter-form-card{
     margin-bottom: 1rem;
@@ -272,4 +272,44 @@ form.filter-form .filter-button:hover{
 .job-offer-show:hover{
     background-color: #e0e0ee;
     cursor: pointer;
+}
+
+
+/* job_offers.show */
+
+.job-offer-details{
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.apply-button{
+    margin-top: 1rem;
+}
+.apply-button:hover{
+    background-color: #e0e0ee;
+}
+
+.more-jobs{
+    margin-bottom: 1rem;
+}
+.more-jobs h2{
+    margin-bottom: 1rem;
+}
+.other-job-offer{
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.other-job-offer-top{
+    display: flex;
+}
+.other-job-offer-top .job-title{
+    margin-right: 1rem;
+}
+.other-job-offer-top .job-created{
+    margin-left: auto;
+}
+
+.other-job-offer-bottom{
+    color: #444;
 }
