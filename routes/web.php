@@ -6,8 +6,6 @@ use App\Http\Controllers\JobApplicationController;
 use App\Http\Controllers\JobOfferController;
 use App\Http\Controllers\MyJobApplicationController;
 use App\Http\Controllers\MyJobOfferController;
-use App\Http\Controllers\MyWorkApplicationController;
-use App\Http\Controllers\MyWorkController;
 use Illuminate\Support\Facades\Route;
 
 Route::get("/", fn() => to_route("jobOffers.index"));
